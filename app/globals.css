@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors from your images */
+  --color-brand-purple: #9333EA;
+  --color-brand-purple-light: #9333EA12;
+  --color-brand-lime: #D9FF54;
+  --color-brand-yellow: #EAB308;
+  
+  /* Background and Surface Colors */
+  --color-dashboard-bg: #F8F9FB;
+  --color-card-border: #F1F5F9;
+
+  /* Custom Border Radius for the "Bento Box" look */
+  --radius-card: 2.5rem;
+  --radius-button: 1.25rem;
+}
+
+/* Custom Scrollbar for the Job Feed */
+@utility custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #cbd5e1;
+  }
+}
+
+/* Base Body Styling to match JobNova's clean look */
+@layer base {
+  :root {
+    --brand-lime: #D9F99D;
+    --brand-purple: #6366F1;
+  }
+}
+
+.bg-brand-lime { background-color: var(--brand-lime); }
+.text-brand-lime { color: var(--brand-lime); }
+.from-brand-purple { --tw-gradient-from: var(--brand-purple); }
+.to-brand-lime { --tw-gradient-to: var(--brand-lime); }
